@@ -19,13 +19,14 @@ export default {
     },
     data: function () {
         return {
-            items: [],
-        };
+            items: []
+        }
     },
     methods: {
         getList() {
-            axios.get("api/items").then((response) => {
-                this.item = response.data;
+            axios.get("api/items")
+            .then(response => {
+                this.items = response.data;
             })
             .catch( error => {
                 console.log( error );

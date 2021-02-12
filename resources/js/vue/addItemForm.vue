@@ -28,7 +28,7 @@ export default {
                     item: this.item
                 })
                 .then(response => {
-                    if (response.stat == 201) {
+                    if (response.status == 201) {
                         this.item.name = "";
                         this.$emit('reloadlist');
                     }
@@ -56,12 +56,18 @@ input {
     width: 100%;
 }
 .plus {
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 .active {
     color: #00ce25;
 }
+.active:hover {
+    cursor: pointer;
+}
 .inactive {
     color: #999999;
+}
+.inactive:hover {
+    cursor: not-allowed;
 }
 </style>

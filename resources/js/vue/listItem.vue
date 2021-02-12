@@ -21,7 +21,7 @@ export default {
     methods: {
         updateCheck() {
             axios.put('api/item/' + this.item.id, {
-                iten: this.item
+                item: this.item
             } )
             .then( response => {
                 if( response.status == 200 ) {
@@ -58,7 +58,7 @@ export default {
 }
 .item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .trashcan {
